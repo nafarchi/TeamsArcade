@@ -27,7 +27,7 @@ function preload() {
 
 function create() {
   var self = this;
-  this.socket = io();
+  this.socket = io('https://teamsspaceships1.azurewebsites.net/');
   this.otherPlayers = this.physics.add.group();
   this.socket.on('currentPlayers', function (players) {
     Object.keys(players).forEach(function (id) {
